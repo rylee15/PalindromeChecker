@@ -1,6 +1,6 @@
 public void setup()
 {
-  String lines[] = {"test","rotator","rewriter","nurses run","madam, i'm adam!","a man! a plan! a canal! panama!"};
+  String lines[] = {"test","rotator","rewriter","nurses run","Madam, I'm Adam!","A Man! A Plan! A Canal! Panama!"};
   System.out.println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) 
   {
@@ -17,10 +17,13 @@ public void setup()
 public boolean palindrome(String sNew)
 {
   String sWord = onlyLetters(sNew);
-  if(sWord.equals(reverse(sWord)))
-    return true;
-  else
-    return false;
+  sWord = sWord.toLowerCase();
+  if(sWord.equals(reverse(sWord))) 
+  {
+     return true;
+  }else{
+     return false; 
+  }
 }
 public String reverse(String str)
 {
